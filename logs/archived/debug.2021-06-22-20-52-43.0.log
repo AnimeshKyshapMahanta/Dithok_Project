@@ -1,0 +1,16 @@
+2021-06-22 20:23:51 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 15.227 seconds (JVM running for 17.627)
+2021-06-22 20:33:41 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 3272 (C:\Users\hp\Downloads\Dithok_Project-master\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-master)
+2021-06-22 20:33:41 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-22 20:33:59 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 17.961 seconds (JVM running for 20.172)
+2021-06-22 20:37:25 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 13172 (C:\Users\hp\Downloads\Dithok_Project-master\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-master)
+2021-06-22 20:37:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-22 20:37:43 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 18.769 seconds (JVM running for 20.938)
+2021-06-22 20:40:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 21216 (C:\Users\hp\Downloads\Dithok_Project-master\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-master)
+2021-06-22 20:40:26 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default
+2021-06-22 20:40:40 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Started MyCommerceApplication in 14.136 seconds (JVM running for 17.024)
+2021-06-22 20:41:49 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - User Viewed Audit Log
+2021-06-22 20:41:49 [http-nio-8080-exec-8] INFO  c.d.m.controller.UserController - This is an info message.
+2021-06-22 20:41:49 [http-nio-8080-exec-8] WARN  c.d.m.controller.UserController - This is a warn message.
+2021-06-22 20:41:49 [http-nio-8080-exec-8] ERROR c.d.m.controller.UserController - This is an error message.
+2021-06-22 20:52:44 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - Starting MyCommerceApplication on LAPTOP-B42IUFVA with PID 23912 (C:\Users\hp\Downloads\Dithok_Project-master\bin\main started by hp in C:\Users\hp\Downloads\Dithok_Project-master)
+2021-06-22 20:52:44 [restartedMain] INFO  c.d.myCommerce.MyCommerceApplication - No active profile set, falling back to default profiles: default

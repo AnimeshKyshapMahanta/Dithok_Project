@@ -15,6 +15,8 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,6 +27,7 @@ import com.dithok.myCommerce.Repo.AuditLogRepository;
 import com.dithok.myCommerce.dto.EditUserDto;
 import com.dithok.myCommerce.dto.ForgotPasswordDto;
 import com.dithok.myCommerce.dto.GenerateOtp;
+import com.dithok.myCommerce.dto.GroupUserDto;
 import com.dithok.myCommerce.dto.LoginDto;
 import com.dithok.myCommerce.dto.RegisterDto;
 import com.dithok.myCommerce.dto.ResetPasswordDto;
@@ -34,6 +37,9 @@ import com.dithok.myCommerce.model.AuditLog;
 import com.dithok.myCommerce.model.PdfModel;
 import com.dithok.myCommerce.model.UserModel;
 import com.dithok.myCommerce.service.AuditLogService;
+
+import com.dithok.myCommerce.model.UserModel;
+
 import com.dithok.myCommerce.service.UserServiceInterface;
 
 import com.dithok.myCommerce.service.sessionMgmtService;
@@ -73,6 +79,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.ui.ModelMap;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -96,8 +104,9 @@ public class UserController {
     @Autowired
     UserServiceInterface userServiceInterface;
 
-
-
+    @Autowired
+    UserDetailsService userService;
+    
     @Autowired
     HttpServletRequest request;
 
@@ -177,7 +186,13 @@ public class UserController {
             		Singleton single = Singleton.getInstance();
             		single.logInMessage(auditlogService,loginUser.getEmail());
             	}
-            	logger.info("User Logged In");
+            	logger.info("User Logged In");   	if(user!=null) {
+            			userId = user.getId().toString();
+            			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            			String name = auth.getName();
+            			System.out.println(name);
+        
+            }
                 return new ResponseEntity<>(new MyCommerceException(1,userId), HttpStatus.OK);
           
             }

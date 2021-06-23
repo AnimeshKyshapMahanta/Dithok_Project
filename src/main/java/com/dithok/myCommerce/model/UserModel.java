@@ -1,5 +1,6 @@
 package com.dithok.myCommerce.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -43,7 +44,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 		@UniqueConstraint(name = "UK_Users_phoneNumber", columnNames = { "phoneNumber"})
 		})
 @EntityListeners(AuditingEntityListener.class)
+
 public class UserModel extends Auditable<String>{
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
